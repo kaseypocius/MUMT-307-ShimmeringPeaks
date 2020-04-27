@@ -9,7 +9,7 @@
 using namespace stk;
 
 //gets the effects together
-JCRev Verb;
+NRev Verb;
 PitShift PitchShift_L;
 PitShift PitchShift_R;
 BiQuad hipass;
