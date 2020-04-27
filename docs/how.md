@@ -15,8 +15,7 @@ The nature of the mono - stereo reverb is also quite important to the character 
 Lets let a step by step look at how the code works. We'll be using the JCRev version as an Example
 <br>
 
-<pre>
-<code>
+```C++
   #include "RtAudio.h"
   #include <iostream>
   #include "PitShift.h"
@@ -67,8 +66,7 @@ Lets let a step by step look at how the code works. We'll be using the JCRev ver
   static StkFloat PitchShiftMix;
   static StkFloat VerbMix;
   static StkFloat PeakMix;
-</code>
-</pre>
+```
 
 <br>
 
