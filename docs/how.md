@@ -99,7 +99,49 @@ int tick( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
   register StkFloat *samples = (StkFloat *) outputBuffer;
   ```
 
+  <br>
 
+  Here we instantiate the sine wave modulators to the pointer, add phase offset, and create the registers that will move audio from the audio card in and out of the of the fx script.
+
+  <br>
+
+  ```
+  //process audio when buffer frames must be filled
+      for ( unsigned int i=0; i<nBufferFrames; i++ ){
+          //generates modulator wave
+          Temp_Peak_Mod_L = Peak_Mod_L->tick();
+          Temp_Peak_Mod_R = Peak_Mod_R->tick();
+
+  ```
+<br>
+
+Now we really start processing. We start by generating the samples of the modulator waves
+
+<br>
+```
+//Mixing of the various outputs to the output
+        sample = PitchShiftMix * PitchShift_Filtered_L + VerbMix * Verb.lastOut(0) + PeakMix * Peaks_L;
+        *samples++ = sample * OutGain;
+        sample = PitchShiftMix * PitchShift_Filtered_R + VerbMix * Verb.lastOut(1) + PeakMix * Peaks_R;
+        *samples++ = sample * OutGain;
+
+        //Mixing of feedback & Input to send into the reverb
+        Verb_Temp1 = 0.95 * Verb_Temp3 + InGain * 0.3 * (*Insamples++);
+
+        //Gain check to try and avoid some clipping/add some distortion to the signal at high gains
+      if (Verb_Temp1 > 0.99){
+          Verb_Temp1 = (Verb_Temp1 * (0.9/Verb_Temp1));
+      }
+```
+<br>
+
+Mixing of the gain on the inputs & outputs, and we build our input buffer here from the feedback Temp value and the current input, as scaled by the gain argument. Some additional multiplication is done on the input buffer here to avoid peaking and self oscillation with sustained tones and long reverb times, but in a system based on feedback, this still occurs. We also do a gain check to see if the signal clips once both signals are summed, and if so, do extra signal scaling.  
+
+<br>
+```
+
+```
+<br>
 
   <h2> Challenges </h2>
 
