@@ -74,7 +74,7 @@ Here the proper header files are loaded, and the STK class instances not using a
 
 <br>
 
-```C++
+```C+
 // This tick() function handles sample computation only.  It will be
 // called automatically when the system needs a new buffer of audio
 // samples.
@@ -86,8 +86,8 @@ Here we build our tick statement. This patch uses "callback" audio, which will c
 
 <br>
 
-```C++
-//Create registers needed for real time input & ouput, and the pointer for the Sinewave to generate properly in the callback function
+  ```C+
+  //Create registers needed for real time input & ouput, and the pointer for the Sinewave to generate properly in the callback function
     SineWave *Peak_Mod_L = (SineWave *) dataPointer;
     SineWave *Peak_Mod_R = (SineWave *) dataPointer;
       Peak_Mod_R->addPhaseOffset(0.5);
