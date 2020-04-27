@@ -21,15 +21,15 @@ This project started as a reverb focused for use in real time with the synthesiz
 The following VSTs and hardware modules have heavily inspired the design here
 
 <h6>VSTs</h6>
-<a href ="https://valhalladsp.com/shop/reverb/valhalla-shimmer/"> Valhalla Shimmer</a></br>
-<a href="https://www.youtube.com/watch?v=UE57APMMi7M">Soundtoys Crystalizer</a> VST version of some of the pitch shifting delay patches on the Eventide h3000</br>
-<a href="https://www.pluginboutique.com/product/2-Effects/53-Multi-Effect-/5226-Excalibur"> Exponential Audio Excalibur </a> Multi Effects VST, which has spurred my interest in the combination of Feedback systems with Ring Mod & Pitch Shifters</br>
+<a href ="https://valhalladsp.com/shop/reverb/valhalla-shimmer/"> Valhalla Shimmer</a><br>
+<a href="https://www.youtube.com/watch?v=UE57APMMi7M">Soundtoys Crystalizer</a> VST version of some of the pitch shifting delay patches on the Eventide h3000<br>
+<a href="https://www.pluginboutique.com/product/2-Effects/53-Multi-Effect-/5226-Excalibur"> Exponential Audio Excalibur </a> Multi Effects VST, which has spurred my interest in the combination of Feedback systems with Ring Mod & Pitch Shifters<br>
 
 <h6>Hardware</h6>
-<a href ="https://www.youtube.com/watch?v=9Svm0Ku6cAY"> Shimmer Cartridge for Tiptop Audio Z-DSP </a> - the quad version of Shimmering Peaks is inspired by the Quad Mode on this version of the Valhalla shimmer algorithm  </br>
-<a href="https://youtu.be/PS_aj2jZgyM?t=1215">Erica Synths Black Hole DSP 2</a> Another eurorack module with a shimmer implementation  </br>
+<a href ="https://www.youtube.com/watch?v=9Svm0Ku6cAY"> Shimmer Cartridge for Tiptop Audio Z-DSP </a> - the quad version of Shimmering Peaks is inspired by the Quad Mode on this version of the Valhalla shimmer algorithm  <br>
+<a href="https://youtu.be/PS_aj2jZgyM?t=1215">Erica Synths Black Hole DSP 2</a> Another eurorack module with a shimmer implementation  <br>
 
-Hainbach</br>
-Dan Lanois</br>
+Hainbach<br>
+Dan Lanois<br>
 
  <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
