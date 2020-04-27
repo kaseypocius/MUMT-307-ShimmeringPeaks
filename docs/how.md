@@ -88,7 +88,7 @@ int tick( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
   <br>
 
   ```
-  //Create registers needed for real time input & ouput, and the pointer for the Sinewave to generate properly in the callback function
+  //Create registers needed for real time input & output, and the pointer for the Sinewave to generate properly in the callback function
   SineWave *Peak_Mod_L = (SineWave *) dataPointer;
   SineWave *Peak_Mod_R = (SineWave *) dataPointer;
   Peak_Mod_R->addPhaseOffset(0.5);
@@ -135,7 +135,13 @@ Now we really start processing. We start by generating the samples of the modula
 ```
 <br>
 
-Mixing of the gain on the inputs & outputs, and we build our input buffer here from the feedback Temp value and the current input, as scaled by the gain argument. Some additional multiplication is done on the input buffer here to avoid peaking and self oscillation with sustained tones and long reverb times, but in a system based on feedback, this still occurs. We also do a gain check to see if the signal clips once both signals are summed, and if so, do extra signal scaling.  
+Mixing of the gain on the inputs & outputs. The mix on the outputs only affects the final outputs, so you can continue use the pitch shifters to excite the filter bank in various ways.
+
+<br>
+
+ The input buffer for the reverb is built here here from the feedback Temp value and the current input to the adac, as scaled by the gain argument.
+
+<br> Some additional multiplication is done on the input buffer here to avoid peaking and self oscillation with sustained tones and long reverb times, but in a system based on feedback, this still occurs. We also do a gain check to see if the signal clips once both signals are summed, and if so, do extra signal scaling.  
 
 <br>
 ```
@@ -188,7 +194,7 @@ Peaks_R = 0.5 * Temp_Peak_Mod_R * (Peak_1.tick(PitchShift_Filtered_R) + Peak_3.t
 ```
 <br>
 
-Then we mix everything together into the needed mono signal to sent back into the reverberators.
+Then we mix everything together into the needed mono signal to sent back into the reverberators. The Feedback constant can be a negative value, so you can also use this step to invert the phase of the signal before it's fed back into the reverberator, added another level of modulation depth if desired.
 
 <br>
 ```
@@ -200,8 +206,12 @@ Verb_Temp3 = 0.0015 * Feedback * (PitchShift_Filtered_L + PitchShift_Filtered_R 
 
   <h2> Challenges </h2>
 
+  The biggest challenge was building for the callback engine, which I had not done in STK before, as most of my experience so far had been with the blocking algorithm. This made implementing some things, such as oscillators, more challenging than I had initially expected, but I am still quite satisfied with the result.
+
+  Finding good gain settings to act as a reference required a bit of trial and error, and I'm still not satisfied with fixed resonance for each filter, but I haven't found a satisfying way to do this setup without too many user defined variables.
+
   <h2> For the Future</h2>
 
-  Further modulation could easily be expanded by replacing the basic sine tone to modular wave table bank, as well as adding frequency or resonance modulation to the filter bank as well. Traditional shimmer verbs also add incorporate a delay line, which could add further modulation possibilities - chorus, further pitch shifting & comb filtering, reverse etc. However I've chosen to focus instead on implementing this algorithm with a few different reverb classes, which I've found was the most rewarding way to easily give a wide variety of reverb characters while keeping the controls constant between designs.
+  Further modulation could easily be expanded by replacing the basic sine tone to modular wave table bank, as well as adding frequency and/or resonance modulation to the filter bank as well. Traditional shimmer verbs also add incorporate a delay line, which could add further modulation possibilities - chorus, further pitch shifting & comb filtering, reverse etc. However I've chosen to focus instead on implementing this algorithm with a few different reverb classes, which I've found was the most rewarding way to easily give a wide variety of reverb characters while keeping the controls constant between designs. The frequency and notch depth of the High pass & Low pass filters could have been user definable as well, but I'd like to limit the amount of user definable variables needed for use of the program.
 
   <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>

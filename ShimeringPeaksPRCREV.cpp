@@ -56,7 +56,7 @@ static StkFloat PeakMix;
 int tick( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
   double streamTime, RtAudioStreamStatus status, void *dataPointer )
   {
-    //Create registers needed for real time input & ouput, and the pointer for the Sinewave to generate properly in the callback function
+    //Create registers needed for real time input & output, and the pointer for the Sinewave to generate properly in the callback function
     SineWave *Peak_Mod_L = (SineWave *) dataPointer;
     SineWave *Peak_Mod_R = (SineWave *) dataPointer;
     Peak_Mod_R->addPhaseOffset(0.5);
@@ -94,7 +94,7 @@ int tick( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
       hipass.tick(Verb.lastOut(1));
       Verb_Temp2_R = hipass.lastOut();
 
-      //Pitch shifts, then highpasses, then lowpasses the audio, to avoid build up on either end of the sprectrum and to avoid some self resonating
+      //Pitch shifts, then highpasses, then lowpasses the audio, to avoid build up on either end of the spectrum and to avoid some self resonating
       PitchShift_L.tick(Verb_Temp2_L);
       hipass.tick(PitchShift_L.lastOut());
       lowpass.tick(hipass.lastOut());
