@@ -15,7 +15,7 @@ The nature of the mono - stereo reverb is also quite important to the character 
 Lets let a step by step look at how the code works. We'll be using the JCRev version as an Example
 <br>
 
-```C+
+```
 #include "RtAudio.h"
 #include <iostream>
 #include "PitShift.h"
@@ -74,36 +74,37 @@ Here the proper header files are loaded, and the STK class instances not using a
 
 <br>
 
-```C+
+```
 // This tick() function handles sample computation only.  It will be
 // called automatically when the system needs a new buffer of audio
 // samples.
 int tick( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
-         double streamTime, RtAudioStreamStatus status, void *dataPointer )
-         ```
-<br>
-Here we build our tick statement. This patch uses "callback" audio, which will call the FX script every time a new block of audio is needed. This also builds the data pointer we'll use for the modulator oscillators, to avoid a segment fault on start up.
+  double streamTime, RtAudioStreamStatus status, void *dataPointer)
+  ```
+  <br>
 
-<br>
+  Here we build our tick statement. This patch uses "callback" audio, which will call the FX script every time a new block of audio is needed. This also builds the data pointer we'll use for the modulator oscillators, to avoid a segment fault on start up.
 
-  ```C+
+  <br>
+
+  ```
   //Create registers needed for real time input & ouput, and the pointer for the Sinewave to generate properly in the callback function
-    SineWave *Peak_Mod_L = (SineWave *) dataPointer;
-    SineWave *Peak_Mod_R = (SineWave *) dataPointer;
-      Peak_Mod_R->addPhaseOffset(0.5);
-    register StkFloat sample;
-    register StkFloat Temp_Peak_Mod_L;
-    register StkFloat Temp_Peak_Mod_R;
-    register StkFloat *Insamples = (StkFloat *) inputBuffer;
-    register StkFloat *samples = (StkFloat *) outputBuffer;
+  SineWave *Peak_Mod_L = (SineWave *) dataPointer;
+  SineWave *Peak_Mod_R = (SineWave *) dataPointer;
+  Peak_Mod_R->addPhaseOffset(0.5);
+  register StkFloat sample;
+  register StkFloat Temp_Peak_Mod_L;
+  register StkFloat Temp_Peak_Mod_R;
+  register StkFloat *Insamples = (StkFloat *) inputBuffer;
+  register StkFloat *samples = (StkFloat *) outputBuffer;
+  ```
 
-```
 
 
-<h2> Challenges </h2>
+  <h2> Challenges </h2>
 
-<h2> For the Future</h2>
+  <h2> For the Future</h2>
 
-Further modulation could easily be expanded by replacing the basic sine tone to modular wave table bank, as well as adding frequency or resonance modulation to the filter bank as well. Traditional shimmer verbs also add incorporate a delay line, which could add further modulation possibilities - chorus, further pitch shifting & comb filtering, reverse etc. However I've chosen to focus instead on implementing this algorithm with a few different reverb classes, which I've found was the most rewarding way to easily give a wide variety of reverb characters while keeping the controls constant between designs.
+  Further modulation could easily be expanded by replacing the basic sine tone to modular wave table bank, as well as adding frequency or resonance modulation to the filter bank as well. Traditional shimmer verbs also add incorporate a delay line, which could add further modulation possibilities - chorus, further pitch shifting & comb filtering, reverse etc. However I've chosen to focus instead on implementing this algorithm with a few different reverb classes, which I've found was the most rewarding way to easily give a wide variety of reverb characters while keeping the controls constant between designs.
 
-<a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
+  <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
