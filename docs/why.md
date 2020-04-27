@@ -9,17 +9,23 @@ I'm a big fan of Brian Eno & Dan Lanois' work, and have continued to find combin
 During the creation process of my work Feedback Cycles, I had experimented with using filtered feedback signals with the  <a href="http://www.doepfer.de/a100_man/A199_man.pdf"> Doepfer A-199 Spring Reverb module </a> and was incredible pleased with the result, but felt limited after awhile with using just one filter. While working on how to expand the initial shimmer algorithm I was reminded of this process by a video by <a href="https://www.youtube.com/watch?v=Zp7DKJaQs9o"> Hainbach </a> about using filters with analog mixing boards to create resonant feedback, and wanted to try bringing this into the digital text based realm.
 
 <h2> Why these Reverb Algorithms? </h2>
-This started as a reverb focused for use with the synthesizers and still is largely focused on this, so my first choice was the JCRev, based on Chowning's focus on FM synthesis. I noted that both the NRev & PCRev both use the same syntax as the JCRev, so implementing them into the script was pretty easy. 
+This started as a reverb focused for use with the synthesizers and still is largely focused on this, so my first choice was the JCRev, based on Chowning's focus on FM synthesis. I noted that both the NRev & PCRev both use the same syntax as the JCRev, so implementing them into the script was pretty easy.
 
 <h2> What sounds didn't make the cut? </h2>
 
 
 <h4> Some other artistic inspirations worth mentioning</h4>
-Tiptop
-Erica Synths
-Valhalla
-Soundtoys
-Excalibur
+The following VSTs and hardware modules have heavily inspired the design here
+
+<h6>VSTs</h6>
+<a href ="https://valhalladsp.com/shop/reverb/valhalla-shimmer/"> Valhalla Shimmer</a>
+<a href="https://www.youtube.com/watch?v=UE57APMMi7M">Soundtoys Crystalizer</a> VST version of some of the pitch shifting delay patches on the Eventide h3000
+<a href="https://www.pluginboutique.com/product/2-Effects/53-Multi-Effect-/5226-Excalibur"> Exponential Audio Excalibur </a> Multi Effects VST, which has spurred my interest in the combination of Feedback systems with Ring Mod & Pitch Shifters
+
+<h6>Hardware</h6>
+<a href ="https://www.youtube.com/watch?v=9Svm0Ku6cAY"> Shimmer Cartridge for Tiptop Audio Z-DSP </a> - the quad version of Shimmering Peaks is inspired by the Quad Mode on this version of the Valhalla shimmer algorithm  
+<a href="https://youtu.be/PS_aj2jZgyM?t=1215">Erica Synths Black Hole DSP 2</a> Another eurorack module with a shimmer implementation  
+
 Hainbach
 Dan Lanois
 
