@@ -7,4 +7,4 @@ permalink: /thanks/--->
 * Sebastian Laguerre - TA
 * Liam Driscoll - Guitar Demo
 
- <a href="https://kaseypocius.github.io/MUMT306-MagicMappedKettle/about"> Back to the About</a>
+ <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>

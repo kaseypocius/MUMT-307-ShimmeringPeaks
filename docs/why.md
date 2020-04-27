@@ -12,7 +12,7 @@ I'm a big fan of Brian Eno & Dan Lanois' work, and have been experimenting a lot
 During the creation process of my work <a href="https://sonus.ca/oeuvre/46674/Feedback_Cycles_Kasey_Pocius">Feedback Cycles</a>, I had experimented with using filtered feedback signals with the <a href="http://www.doepfer.de/a100_man/A199_man.pdf"> Doepfer A-199 Spring Reverb module </a> and was incredible pleased with the result, but felt limited after awhile with using just one filter, and mixing multiple filters together would suffer due to analog noise build up. While working on how to expand the initial shimmer algorithm I was reminded of this process by a video by <a href="https://www.youtube.com/watch?v=Zp7DKJaQs9o"> Hainbach </a> about using filters with analog mixing boards to create resonant feedback, and wanted to try bringing this into the digital text based realm.
 
 <h2> Why these Reverb Algorithms? </h2>
-This started as a reverb focused for use with the synthesizers and still is largely focused on this, so my first choice was the JCRev, based on Chowning's focus on FM synthesis and my existing familiarity with the algorithm. I noted that both the NRev & PCRev both use the same syntax as the JCRev, so implementing them into the script was pretty easy, and allowed for a wide variety of reverb characters while keeping the controls constant across all of the versions. 
+This project started as a reverb focused for use in real time with the synthesizers and still is largely focused on this, so my first choice was the JCRev, based on Chowning's focus on FM synthesis, and my personal preference for this algorithm as I personally found it to be a good balance of quality and system load on my personal machine. While testing the different algorithm for their CPU use, I noted that both the NRev & PCRev both use the same syntax as the JCRev, so implementing them into the script was pretty easy, and allowed for a wide variety of reverb characters while keeping the controls constant across all of the versions.
 
 <h2> What sounds didn't make the cut? </h2>
 
@@ -32,4 +32,4 @@ The following VSTs and hardware modules have heavily inspired the design here
 Hainbach
 Dan Lanois
 
- <a href="https://kaseypocius.github.io/MUMT306-MagicMappedKettle/about"> Back to the About</a>
+ <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>

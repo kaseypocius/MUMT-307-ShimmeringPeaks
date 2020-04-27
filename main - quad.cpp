@@ -185,8 +185,8 @@ int main(int argc, char *argv[])
     std::cout << argv[10] << " Pitch Shift Mix" << std::endl;
     std::cout << argv[11] << " Verb Mix" << std::endl;
     std::cout << argv[12] << " Peak Mix" << std::endl;
-    std::cout << "usage: " << argv[13] << " Left Shift Factor 2" << std::endl;
-    std::cout << "usage: " << argv[14] << " Right Shift Factor 2" << std::endl;
+    std::cout << argv[13] << " Left Shift Factor 2" << std::endl;
+    std::cout << argv[14] << " Right Shift Factor 2" << std::endl;
 
     static StkFloat Verbt60 = atof(argv[1]);
 
