@@ -1,8 +1,9 @@
-// crtsine.cpp STK tutorial program
+//g++ -Istk/include/ -Lstk/src/ -D__MACOSX_CORE__ ShimmeringPeaksPRCREV.cpp -lstk -lpthread -framework CoreAudio -framework CoreMIDI -framework CoreFoundation -o ShimmeringPeaks-PRCRev
+
 #include "RtAudio.h"
 #include <iostream>
 #include "PitShift.h"
-#include "JCRev.h"
+#include "PRCRev.h"
 #include "BiQuad.h"
 #include "SineWave.h"
 using namespace stk;
