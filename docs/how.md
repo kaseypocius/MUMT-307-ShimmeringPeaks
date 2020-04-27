@@ -13,6 +13,7 @@ The nature of the mono - stereo reverb is also quite important to the character 
 
 <h2> A closer look at the code </h2>
 Lets let a step by step look at how the code works. We'll be using the JCRev version as an Example
+</br>
 
 <pre><code>#include "RtAudio.h"
 #include <iostream>
@@ -65,6 +66,7 @@ static StkFloat PitchShiftMix;
 static StkFloat VerbMix;
 static StkFloat PeakMix;
 </code></pre>
+</br>
 
 Here the proper header files are loaded, and the STK class instances not using a data pointer are created here for use later on. We then create all the temp variables that are used in the processing loop, as well as all the gain variables that will be defined once we load the user input
 
