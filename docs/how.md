@@ -137,11 +137,9 @@ Now we really start processing. We start by generating the samples of the modula
 
 Mixing of the gain on the inputs & outputs. The mix on the outputs only affects the final outputs, so you can continue use the pitch shifters to excite the filter bank in various ways.
 
-<br>
-
  The input buffer for the reverb is built here here from the feedback Temp value and the current input to the adac, as scaled by the gain argument.
 
-<br> Some additional multiplication is done on the input buffer here to avoid peaking and self oscillation with sustained tones and long reverb times, but in a system based on feedback, this still occurs. We also do a gain check to see if the signal clips once both signals are summed, and if so, do extra signal scaling.  
+Some additional multiplication is done on the input buffer here to avoid peaking and self oscillation with sustained tones and long reverb times, but in a system based on feedback, this still occurs. We also do a gain check to see if the signal clips once both signals are summed, and if so, do extra signal scaling.  
 
 <br>
 ```
