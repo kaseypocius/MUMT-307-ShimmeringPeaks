@@ -72,6 +72,34 @@ static StkFloat PeakMix;
 
 Here the proper header files are loaded, and the STK class instances not using a data pointer are created here for use later on. We then create all the temp variables that are used in the processing loop, as well as all the gain variables that will be defined once we load the user input
 
+<br>
+
+```C++
+// This tick() function handles sample computation only.  It will be
+// called automatically when the system needs a new buffer of audio
+// samples.
+int tick( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
+         double streamTime, RtAudioStreamStatus status, void *dataPointer )
+         ```
+<br>
+Here we build our tick statement. This patch uses "callback" audio, which will call the FX script every time a new block of audio is needed. This also builds the data pointer we'll use for the modulator oscillators, to avoid a segment fault on start up.
+
+<br>
+
+```C++
+//Create registers needed for real time input & ouput, and the pointer for the Sinewave to generate properly in the callback function
+    SineWave *Peak_Mod_L = (SineWave *) dataPointer;
+    SineWave *Peak_Mod_R = (SineWave *) dataPointer;
+      Peak_Mod_R->addPhaseOffset(0.5);
+    register StkFloat sample;
+    register StkFloat Temp_Peak_Mod_L;
+    register StkFloat Temp_Peak_Mod_R;
+    register StkFloat *Insamples = (StkFloat *) inputBuffer;
+    register StkFloat *samples = (StkFloat *) outputBuffer;
+
+```
+
+
 <h2> Challenges </h2>
 
 <h2> For the Future</h2>
