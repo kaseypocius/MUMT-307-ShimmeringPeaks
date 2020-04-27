@@ -17,56 +17,56 @@ Lets let a step by step look at how the code works. We'll be using the JCRev ver
 
 <pre>
 <code>
-#include "RtAudio.h"
-#include <iostream>
-#include "PitShift.h"
-#include "JCRev.h"
-#include "BiQuad.h"
-#include "SineWave.h"
-using namespace stk;
+  #include "RtAudio.h"
+  #include <iostream>
+  #include "PitShift.h"
+  #include "JCRev.h"
+  #include "BiQuad.h"
+  #include "SineWave.h"
+  using namespace stk;
 
-//gets the effects together
-JCRev Verb;
-PitShift PitchShift_L;
-PitShift PitchShift_R;
-BiQuad hipass;
-BiQuad lowpass;
-BiQuad Peak_1;
-BiQuad Peak_2;
-BiQuad Peak_3;
-BiQuad Peak_4;
-BiQuad Peak_5;
-BiQuad Peak_6;
-BiQuad Peak_7;
-BiQuad Peak_8;
-BiQuad Peak_9;
-BiQuad Peak_10;
-BiQuad Peak_11;
-BiQuad Peak_12;
-BiQuad Peak_13;
-BiQuad Peak_14;
-BiQuad Peak_15;
-BiQuad Peak_16;
+  //gets the effects together
+  JCRev Verb;
+  PitShift PitchShift_L;
+  PitShift PitchShift_R;
+  BiQuad hipass;
+  BiQuad lowpass;
+  BiQuad Peak_1;
+  BiQuad Peak_2;
+  BiQuad Peak_3;
+  BiQuad Peak_4;
+  BiQuad Peak_5;
+  BiQuad Peak_6;
+  BiQuad Peak_7;
+  BiQuad Peak_8;
+  BiQuad Peak_9;
+  BiQuad Peak_10;
+  BiQuad Peak_11;
+  BiQuad Peak_12;
+  BiQuad Peak_13;
+  BiQuad Peak_14;
+  BiQuad Peak_15;
+  BiQuad Peak_16;
 
-//casts the temp variables for DSP processing
-static StkFloat Verb_Temp1;
-static StkFloat Verb_Temp2_L;
-static StkFloat Verb_Temp2_R;
-static StkFloat Verb_Temp3;
-static StkFloat PitchShift_Sum_L;
-static StkFloat PitchShift_Sum_R;
-static StkFloat PitchShift_Filtered_L;
-static StkFloat PitchShift_Filtered_R;
-static StkFloat Peaks_L;
-static StkFloat Peaks_R;
+  //casts the temp variables for DSP processing
+  static StkFloat Verb_Temp1;
+  static StkFloat Verb_Temp2_L;
+  static StkFloat Verb_Temp2_R;
+  static StkFloat Verb_Temp3;
+  static StkFloat PitchShift_Sum_L;
+  static StkFloat PitchShift_Sum_R;
+  static StkFloat PitchShift_Filtered_L;
+  static StkFloat PitchShift_Filtered_R;
+  static StkFloat Peaks_L;
+  static StkFloat Peaks_R;
 
-//creates the empty gain variables. These will be given values by the user later.
-static StkFloat InGain;
-static StkFloat OutGain;
-static StkFloat Feedback;
-static StkFloat PitchShiftMix;
-static StkFloat VerbMix;
-static StkFloat PeakMix;
+  //creates the empty gain variables. These will be given values by the user later.
+  static StkFloat InGain;
+  static StkFloat OutGain;
+  static StkFloat Feedback;
+  static StkFloat PitchShiftMix;
+  static StkFloat VerbMix;
+  static StkFloat PeakMix;
 </code>
 </pre>
 
@@ -80,4 +80,4 @@ Here the proper header files are loaded, and the STK class instances not using a
 
 Further modulation could easily be expanded by replacing the basic sine tone to modular wave table bank, as well as adding frequency or resonance modulation to the filter bank as well. Traditional shimmer verbs also add incorporate a delay line, which could add further modulation possibilities - chorus, further pitch shifting & comb filtering, reverse etc. However I've chosen to focus instead on implementing this algorithm with a few different reverb classes, which I've found was the most rewarding way to easily give a wide variety of reverb characters while keeping the controls constant between designs.
 
- <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
+<a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
