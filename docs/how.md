@@ -9,10 +9,14 @@ A Mono audio input is fed into a mono to stereo reverb, and then pitch shifted, 
 <h2> Why Use My Patches?</h2>
 Shimmering Peaks can be used to achieve a wide variety of audio effects. Pitch shift values close to 1 will use the feedback loop to excite the filter bank, reinforcing & smearing spectral content relative to the reverb time and feedback gain. Higher pitch shift values will cause more traditional shimmer like effects, with filter banks working to excite other filters in the system as the signals are pitch shifted.
 
-The nature of the mono - stereo reverb is also quite important to the character of the Shimmer Peaks, as both pitch shifted feedback signals will feed into both pitch shifters, distributed by the early & late reflection systems.
+The nature of the mono - stereo reverb is also quite important to the character of the Shimmer Peaks, as both pitch shifted feedback signals will feed into both pitch shifters, distributed by the early & late reflection systems. Additionally, the pitch shifting algorithm extend outside of the typical one octave range, which when paired with the resonator bank, can be used to easily create effects ranging from spring reverb like to lush sub bass pads and beyond.
+
+<h2> A closer look at the code </h2>
+
+<h2> Challenges </h2>
 
 <h2> For the Future</h2>
 
-The Arduino could be replaced by a wireless model, and a network enabled model with the <a href="https://github.com/CNMAT/OSC">CNMAT OSC Library </a> would allow for all the OSC formatting to be done on the Arduino itself, removing the need for the max patch. More robust sensors may be needed, but as stated previously, I seem to have lucked out with my own sensors. Further updates to the patches will include flags and triggers for certain states it detects in the water (ie rolling, coming out of boil, transients in the hydrophone), that would be available to the user for mapping, though as stated in the why page, I have yet to find a good musical implementation of these data sets. Many of those previously mentioned mappings would also increase dependency on the hydrophone's audio data, as my current calibration protocols prioritize smooth musical ramps, which highlight the highs and lows of the sensor set and can be easily transported from room to room over instead of assigning events to exact degree/humidity values.
+Further modulation could easily be expanded by replacing the basic sine tone to modular wave table bank, as well as adding frequency or resonance modulation to the filter bank as well. Traditional shimmer verbs also add incorporate a delay line, which could add further modulation possibilities - chorus, further pitch shifting & comb filtering, reverse etc. However I've chosen to focus instead on implementing this algorithm with a few reverbs, which I've found is my personal favorite way of experimenting with changes in comb filter combinations here.
 
  <a href="https://kaseypocius.github.io/MUMT306-MagicMappedKettle/about"> Back to the About</a>
