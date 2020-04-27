@@ -18,16 +18,19 @@ This project started as a reverb focused for use in real time with the synthesiz
 
 
 <h4> Some other artistic inspirations worth mentioning</h4>
-The following VSTs and hardware modules have heavily inspired the design here
+My personal experience of the following VSTs and hardware modules have heavily inspired the design here
 
 <h6>VSTs</h6>
-<a href ="https://valhalladsp.com/shop/reverb/valhalla-shimmer/"> Valhalla Shimmer</a><br>
+<a href ="https://valhalladsp.com/shop/reverb/valhalla-shimmer/"> Valhalla Shimmer</a>The standard shimmer sound<br>
 <a href="https://www.youtube.com/watch?v=UE57APMMi7M">Soundtoys Crystalizer</a> VST version of some of the pitch shifting delay patches on the Eventide h3000<br>
+<a href="https://www.soundhack.com/freeware/"> Soundhack ++pitchdelay </a> My personal go to pitch shifting delay for real time user, and the feedback limit of 200% on this was my inspiration to play around with negative feedback here.
 <a href="https://www.pluginboutique.com/product/2-Effects/53-Multi-Effect-/5226-Excalibur"> Exponential Audio Excalibur </a> Multi Effects VST, which has spurred my interest in the combination of Feedback systems with Ring Mod & Pitch Shifters<br>
 
 <h6>Hardware</h6>
 <a href ="https://www.youtube.com/watch?v=9Svm0Ku6cAY"> Shimmer Cartridge for Tiptop Audio Z-DSP </a> - the quad version of Shimmering Peaks is inspired by the Quad Mode on this version of the Valhalla shimmer algorithm  <br>
 <a href="https://youtu.be/PS_aj2jZgyM?t=1215">Erica Synths Black Hole DSP 2</a> Another eurorack module with a shimmer implementation  <br>
+<a href="https://mqtthiqs.github.io/parasites/clouds.html">Mutable Instruments Clouds - Parasite Firmware - Oliverb Mode</a> An alternative firmware for a eurorack digital granulator module, which adds a reverb mode capable of shimmer effects. I often use this in VCV Rack via <a href="https://github.com/adbrant/ArableInstruments"> this port. </a><br>
+<a href="http://www.makenoisemusic.com/modules/erbe-verb">Make Noise Erbe Verbe </a> Tom Erbe's DSP Reverb for Make Noise, and the inspiration of the Oliverb Mode. Obviously an inspiration to this project as well.
 
 Hainbach<br>
 Dan Lanois<br>

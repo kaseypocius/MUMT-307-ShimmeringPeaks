@@ -1,6 +1,6 @@
-# MUMT306-MagicMappedKettle
- Mappings for DHT11 & DHT22 sensors to control digital processing of boiling water. Completed in part as a final project for MUMT306 at McGill.
+# MUMT307-ShimmeringPeaks
 
- Makes use of the Adafruit DHT library, avalible at https://github.com/adafruit/DHT-sensor-library
+<h1> Shimmering Peaks </h1>
+A collection of shimmer style reverbs, using the JCRev, PCREv & NREV classes of reverberators, pitch-shifting and Modulating Resonant Peak filters. Completed in part as a final project for MUMT307 at McGill. Makes use of STK for it's audio algorithms.
 
  <a href="https://kaseypocius.github.io/MUMT306-MagicMappedKettle/about"> Read more about the project here </a>
