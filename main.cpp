@@ -22,7 +22,7 @@ BiQuad Peak_6;
 BiQuad Peak_7;
 BiQuad Peak_8;
 
-//casts the temp variables for DSP processing
+//casts the temp variables for DSP
 static StkFloat Verb_Temp1;
 static StkFloat Verb_Temp2_L;
 static StkFloat Verb_Temp2_R;
