@@ -12,7 +12,7 @@ Shimmering Peaks can be used to achieve a wide variety of audio effects. Pitch s
 The nature of the mono - stereo reverb is also quite important to the character of the Shimmer Peaks, as both pitch shifted feedback signals will feed into both pitch shifters, distributed by the early & late reflection systems. Additionally, the pitch shifting algorithm extend outside of the typical one octave range, which when paired with the resonator bank, can be used to easily create effects ranging from spring reverb like to lush sub bass pads and beyond.
 
 <h2> A closer look at the code </h2>
-Lets let a step by step look at how the code works. We'll be using the JCRev version as an Example
+Lets let a step by step look at how the DSP portion code works. We'll be using the JCRev version as an Example
 <br>
 
 ```
@@ -139,6 +139,61 @@ Mixing of the gain on the inputs & outputs, and we build our input buffer here f
 
 <br>
 ```
+//Start of the reverb chain
+Verb.tick( Verb_Temp1 );
+
+//hipassing the post reverb signal, to avoid possible low end build up
+hipass.tick(Verb.lastOut(0));
+Verb_Temp2_L = hipass.lastOut();
+hipass.tick(Verb.lastOut(1));
+Verb_Temp2_R = hipass.lastOut();
+```
+<br>
+
+Reverb is then calculated, and some initial filtering is done, which avoids some more build up on the lower and upper ends of the spectrum
+
+<br>
+```
+//Pitch shifts, then highpasses, then lowpasses the audio, to avoid build up on either end of the spectrum and to avoid some self resonating
+PitchShift_L.tick(Verb_Temp2_L);
+hipass.tick(PitchShift_L.lastOut());
+lowpass.tick(hipass.lastOut());
+PitchShift_Filtered_L = lowpass.lastOut();
+
+```
+<br>
+
+The signals are then pitch shifted and filtered again to eliminate any new unwanted frequencies. In the Quad models, the pitch shifted signals are summed here as well
+
+<br>
+```
+//The filtered signal is then passed through the bandpass filter bank
+Peaks_L = 0.5 * Temp_Peak_Mod_L * (Peak_1.tick(PitchShift_Filtered_L) + Peak_3.tick(PitchShift_Filtered_L) + Peak_5.tick(PitchShift_Filtered_L) + Peak_7.tick(PitchShift_Filtered_L) + Peak_9.tick(PitchShift_Filtered_L) + Peak_11.tick(PitchShift_Filtered_L) + Peak_13.tick(PitchShift_Filtered_L) + Peak_15.tick(PitchShift_Filtered_L)) + (Temp_Peak_Mod_R * (Peak_2.tick(PitchShift_Filtered_L) + Peak_4.tick(PitchShift_Filtered_L) + Peak_6.tick(PitchShift_Filtered_L) + Peak_8.tick(PitchShift_Filtered_L) + Peak_10.tick(PitchShift_Filtered_L) + Peak_12.tick(PitchShift_Filtered_L) + Peak_14.tick(PitchShift_Filtered_L) + Peak_16.tick(PitchShift_Filtered_L) ) );
+
+```
+<br>
+
+We then put the left pitch shifted signal through the bandpass filter bank, modulate the resulting gains with the mod oscillator, and then sum them together. In the next step we repeat the above filtering steps for the right side, but this time we use the mod oscillators in inverse order. This creates the effect of spreading the modulation of the Odd & Even filter banks across the stereo field, which creates a phantom image that moves towards the center as the two oscillators meet at their zero crossings.
+
+<br>
+```
+//Repeat for the right side
+PitchShift_R.tick(Verb_Temp2_R);
+hipass.tick(PitchShift_R.lastOut());
+lowpass.tick(hipass.lastOut());
+PitchShift_Filtered_R = lowpass.lastOut();
+
+Peaks_R = 0.5 * Temp_Peak_Mod_R * (Peak_1.tick(PitchShift_Filtered_R) + Peak_3.tick(PitchShift_Filtered_R) + Peak_5.tick(PitchShift_Filtered_R) + Peak_7.tick(PitchShift_Filtered_R) + Peak_9.tick(PitchShift_Filtered_R) + Peak_11.tick(PitchShift_Filtered_R) + Peak_13.tick(PitchShift_Filtered_R) + Peak_15.tick(PitchShift_Filtered_R)) + ((Temp_Peak_Mod_L * (Peak_2.tick(PitchShift_Filtered_R) + Peak_4.tick(PitchShift_Filtered_R) + Peak_6.tick(PitchShift_Filtered_R) + Peak_8.tick(PitchShift_Filtered_R) + Peak_10.tick(PitchShift_Filtered_R) + Peak_12.tick(PitchShift_Filtered_R) + Peak_14.tick(PitchShift_Filtered_R) + Peak_16.tick(PitchShift_Filtered_R))));
+
+```
+<br>
+
+Then we mix everything together into the needed mono signal to sent back into the reverberators.
+
+<br>
+```
+//Mix everything together into one mono signal to return back into the reverb
+Verb_Temp3 = 0.0015 * Feedback * (PitchShift_Filtered_L + PitchShift_Filtered_R + Peaks_L + Peaks_R);
 
 ```
 <br>
