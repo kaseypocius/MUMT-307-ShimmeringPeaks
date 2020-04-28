@@ -2,7 +2,7 @@
 title: "Tutorial"
 permalink: /tutorial/--->
 
-<h1> Tutorial <h1>
+<h1> Tutorial </h1>
 A tutorial on how to use the Shimmering Peaks Reverbs, with your defaul audio device.
 
 1. Make sure you have the STK compiled for your machine, and that you know where the files are. For more help on that see <a href="https://ccrma.stanford.edu/software/stk/index.html"> the STK documentation </a>
