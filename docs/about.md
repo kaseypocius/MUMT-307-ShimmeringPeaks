@@ -10,4 +10,4 @@ A collection of shimmer style reverbs, using the JCRev, PCREv & NREV classes of 
 <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/how"> How?</a><br>
 <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/demos"> Demos</a><br>
 <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/thanks"> Thanks</a><br>
-<a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/tutorial"> Tutorial on Setting up the Example Patches</a>
+<a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/tutorial"> Tutorial on Setup</a>
