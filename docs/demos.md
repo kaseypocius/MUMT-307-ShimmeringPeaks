@@ -129,12 +129,12 @@ Mother32 sequenced passed through the quad reverbs with the following Settings: 
 ```
 
 <a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo3-Mother32Seq_JCREV-QUAD.wav?raw=true">JCRev-Quad </a> <br>
-<img src="spectrograms/Demo3-Mother32Seq_JCREV.png" alt="Spectrogram"> <br>
+<img src="spectrograms/Demo3-Mother32Seq_JCREV-QUAD.png" alt="Spectrogram"> <br>
 
 <a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo3-Mother32Seq_NREV-QUAD.wav?raw=true">NRev-Quad </a> <br>
-<img src="spectrograms/Demo3-Mother32Seq_NREV.png" alt="Spectrogram"> <br>
+<img src="spectrograms/Demo3-Mother32Seq_NREV-QUAD.png" alt="Spectrogram"> <br>
 
 <a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo3-Mother32Seq_PRCREV-QUAD.wav?raw=true">PRCRev-Quad </a> <br>
-<img src="spectrograms/Demo3-Mother32Seq_PRCREV.png" alt="Spectrogram"> <br>
+<img src="spectrograms/Demo3-Mother32Seq_PRCREV-QUAD.png" alt="Spectrogram"> <br>
 
   <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
