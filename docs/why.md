@@ -34,7 +34,5 @@ My personal experience of the following VSTs and hardware modules have heavily i
 <a href="https://mqtthiqs.github.io/parasites/clouds.html">Mutable Instruments Clouds - Parasite Firmware - Oliverb Mode</a> An alternative firmware for a eurorack digital granulator module, which adds a reverb mode capable of shimmer effects. I often use this in VCV Rack via <a href="https://github.com/adbrant/ArableInstruments"> this port. </a><br>
 <a href="http://www.makenoisemusic.com/modules/erbe-verb">Make Noise Erbe Verbe </a> Tom Erbe's DSP Reverb for Make Noise, and the inspiration of the Oliverb Mode. Obviously an inspiration to this project as well.
 
-Hainbach<br>
-Dan Lanois<br>
 
  <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
