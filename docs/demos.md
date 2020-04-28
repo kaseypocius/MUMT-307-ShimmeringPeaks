@@ -51,23 +51,23 @@ Extra arguments for the quad demos
 
 <h2> Liam Driscoll On The Guitar </h2>
 
- <a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo2-GuitDI_Dry.wav?raw=true"> Dry signal from DI</a><br>
- <img src="spectrograms/Demo2-GuitDI_Dry.png" alt="Spectrogram"><br>
+<a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo2-GuitDI_Dry.wav?raw=true"> Dry signal from DI</a><br>
+<img src="spectrograms/Demo2-GuitDI_Dry.png" alt="Spectrogram"><br>
 
 Passed through the reverbs with the following Settings:<br>
 ```
- 16s t60
- 161.82 Hz Base Peak Frequency
- 2 Peaks Spacing Constant
- 0.05 Hz Mod Frequency
- 2 Left Shift Factor
- 0.5 Right Shift Factor
- 0.8 Input Gain
- 1 Output Gain
- -0.9 Feedback
- 0.5 Pitch Shift Mix
- 0.25 Verb Mix
- 0.5 Peak Mix
+16s t60
+161.82 Hz Base Peak Frequency
+2 Peaks Spacing Constant
+0.05 Hz Mod Frequency
+2 Left Shift Factor
+0.5 Right Shift Factor
+0.8 Input Gain
+1 Output Gain
+-0.9 Feedback
+0.5 Pitch Shift Mix
+0.25 Verb Mix
+0.5 Peak Mix
 ```
 
 <a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo2-GuitDI_JCREV.wav?raw=true">JCRev </a> <br>
@@ -137,4 +137,4 @@ Mother32 sequenced passed through the quad reverbs with the following Settings: 
 <a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo3-Mother32Seq_PRCREV-QUAD.wav?raw=true">PRCRev-Quad </a> <br>
 <img src="spectrograms/Demo3-Mother32Seq_PRCREVQUAD.png" alt="Spectrogram"> <br>
 
-  <a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
+<a href="https://kaseypocius.github.io/MUMT-307-ShimmeringPeaks/about"> Back to the About</a>
