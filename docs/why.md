@@ -16,9 +16,6 @@ During the creation process of my work <a href="https://sonus.ca/oeuvre/46674/Fe
 <h2> Why these Reverb Algorithms? </h2>
 This project started as a reverb focused for use in real time with the synthesizers and still is largely focused on this, so my first choice was the JCRev, based on Chowning's focus on FM synthesis, and my personal preference for this algorithm as I personally found it to be a good balance of quality and system load on my personal machine. While testing the different algorithm for their CPU use, I noted that both the NRev & PRCRev both use the same syntax as the JCRev, so implementing them into the script was pretty easy, and allowed for a wide variety of reverb characters while keeping the controls constant across all of the versions.
 
-<h2> What sounds didn't make the cut? </h2>
-
-
 <h4> Some other artistic inspirations worth mentioning</h4>
 My personal experience of the following VSTs and hardware modules have heavily inspired the design here
 
