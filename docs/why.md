@@ -25,7 +25,7 @@ My personal experience of the following VSTs and hardware modules have heavily i
 <h6>VSTs</h6>
 <a href ="https://valhalladsp.com/shop/reverb/valhalla-shimmer/"> Valhalla Shimmer</a>The standard shimmer sound<br>
 <a href="https://www.youtube.com/watch?v=UE57APMMi7M">Soundtoys Crystalizer</a> VST version of some of the pitch shifting delay patches on the Eventide h3000<br>
-<a href="https://www.soundhack.com/freeware/"> Soundhack ++pitchdelay </a> My personal go to pitch shifting delay for real time user, and the feedback limit of 200% on this was my inspiration to play around with negative feedback here.
+<a href="https://www.soundhack.com/freeware/"> Soundhack ++pitchdelay </a> My personal go to pitch shifting delay for real time user, and the feedback limit of 200% on this was my inspiration to play around with negative feedback here.<br>
 <a href="https://www.pluginboutique.com/product/2-Effects/53-Multi-Effect-/5226-Excalibur"> Exponential Audio Excalibur </a> Multi Effects VST, which has spurred my interest in the combination of Feedback systems with Ring Mod & Pitch Shifters<br>
 
 <h6>Hardware</h6>
