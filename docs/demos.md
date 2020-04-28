@@ -2,6 +2,39 @@
 title: "Demos"
 permalink: /demos/--->
 
+<h2> Filter Pings </h2>
+
+<a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo1-Mother32Pings_Dry.wav?raw=true">Dry </a> <br>
+<img src="spectrograms/Demo1-Mother32Pings_Dry.png" alt="Spectrogram"> <br>
+
+Passed through the reverbs with the following Settings
+
+32.6s t60
+65.4 Hz Base Peak Frequency
+1.61803398875 Peaks Spacing Constant
+0.05 Hz Mod Frequency
+0.25 Left Shift Factor
+0.5 Right Shift Factor
+0.5 Input Gain
+1 Output Gain
+0.99 Feedback
+0.5 Pitch Shift Mix
+0.25 Verb Mix
+0.5 Peak Mix
+
+Extra arguments for the quad demos
+
+0.33 Left Shift Factor 2
+0.66 Right Shift Factor 2
+
+<a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo1-Mother32Pings_JCREV.wav?raw=true">JCRev </a> <br>
+<img src="spectrograms/Demo1-Mother32Pings_JCREV.png" alt="Spectrogram"> <br>
+
+<a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo1-Mother32Pings_NREV.wav?raw=true">NRev </a> <br>
+<img src="spectrograms/Demo1-Mother32Pings_NREV.png" alt="Spectrogram"> <br>
+
+<a href="https://github.com/kaseypocius/MUMT-307-ShimmeringPeaks/blob/master/docs/audio/Demo1-Mother32Pings_PRCREV.wav?raw=true">PRCRev </a> <br>
+<img src="spectrograms/Demo1-Mother32Pings_PRCREV.png" alt="Spectrogram"> <br>
 
 <img src="demos/three quarters full boil from lukewarm HUMIDITY PANIC YES.png" alt="Spectrogram">
 
@@ -10,7 +43,7 @@ permalink: /demos/--->
 <img src="demos/three quarters full boil from lukewarm HUMIDITY PANIC YES RAW.png" alt="Spectrogram RAW">
 
  <a href="https://github.com/kaseypocius/MUMT306-MagicMappedKettle/blob/master/docs/demos/three%20quarters%20full%20boil%20from%20lukewarm%20HUMIDITY%20PANIC%20YES%20RAW.wav?raw=true">
-NRev
+NRev </a>
 16s t60
 161.82 Hz Base Peak Frequency
 2 Peaks Spacing Constant
@@ -22,24 +55,13 @@ NRev
 -0.9 Feedback
 0.5 Pitch Shift Mix
 0.25 Verb Mix
-0.5 Peak Mix</a>
+0.5 Peak Mix
 
 <img src="demos/three quarters full boil from lukewarm HUMIDITY PANIC YES RAW.png" alt="Spectrogram RAW">
 
  <a href="https://github.com/kaseypocius/MUMT306-MagicMappedKettle/blob/master/docs/demos/three%20quarters%20full%20boil%20from%20lukewarm%20HUMIDITY%20PANIC%20YES%20RAW.wav?raw=true">
 JCRev
-16s t60
-161.82 Hz Base Peak Frequency
-2 Peaks Spacing Constant
-0.05 Hz Mod Frequency
-2 Left Shift Factor
-0.5 Right Shift Factor
-0.8 Input Gain
-1 Output Gain
--0.9 Feedback
-0.5 Pitch Shift Mix
-0.25 Verb Mix
-0.5 Peak Mix</a>
+</a>
 
 <img src="demos/three quarters full boil from lukewarm HUMIDITY PANIC YES RAW.png" alt="Spectrogram RAW">
 
